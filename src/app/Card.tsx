@@ -2,7 +2,6 @@
 import Image from "next/image";
 import { useRef, useState } from "react";
 
-// Tipo para los efectos del mouse
 type MouseEffects = {
   xPercentage: number;
   yPercentage: number;
@@ -10,7 +9,6 @@ type MouseEffects = {
   yRotation: number;
 };
 
-// Función para calcular los efectos del mouse
 const hoverMouseEffects = (
   ev: React.MouseEvent<HTMLDivElement>,
   boundingRect: DOMRect
@@ -27,7 +25,6 @@ const hoverMouseEffects = (
   return { xPercentage, yPercentage, xRotation, yRotation };
 };
 
-// Función para aplicar los efectos calculados al elemento
 const applyMouseEffects = (
   target: HTMLElement,
   effects: MouseEffects,
@@ -42,9 +39,9 @@ const applyMouseEffects = (
   // target.style.setProperty("--scale", "1.3");
 };
 
-// Grandes - aspect-[7/12]
-// Medianas - aspect-[64/88]
-// Pequeñas - aspect-[41/63]
+// Large - aspect-[7/12]
+// Medium - aspect-[64/88]
+// Small - aspect-[41/63]
 
 
 const Card = () => {
