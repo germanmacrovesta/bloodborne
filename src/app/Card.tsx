@@ -81,7 +81,7 @@ const Card = () => {
 
       <div
         ref={cardRef}
-        className={`card  relative w-[270px] aspect-[7/12] bg-white rounded-md transition-transform duration-500 ease-out `}
+        className={`card relative w-[270px] aspect-[7/12] bg-white rounded-md transition-transform duration-500 ease-out `}
         style={{
           transform: `
             rotateX(var(--x-rotation, 0deg))
@@ -95,7 +95,9 @@ const Card = () => {
         {!isFlipped && (
           <div className="flex flex-col h-full">
             <div className="h-[3%] border-b border-slate-400 border-dashed"></div>
-            <div className="h-[11%] border-b border-slate-400 border-dashed"></div>
+            <div className="h-[11%] border-b text-xl font-bold border-slate-400 border-dashed">
+              BESTIA INFECTADA
+            </div>
             <div className="h-[28%] border-b border-slate-400 border-dashed"></div>
             <div className="h-[20%] border-b border-slate-400 border-dashed"></div>
             <div className="h-[20%] border-b border-slate-400 border-dashed"></div>

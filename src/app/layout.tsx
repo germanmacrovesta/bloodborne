@@ -2,15 +2,16 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+const adobeGaramondPro = localFont({
+  src: [
+    { path: "./fonts/Adobe Garamond Pro Regular.woff2", weight: "400" },
+    { path: "./fonts/Adobe Garamond Pro Italic.woff2", weight: "400", style: "italic" },
+    { path: "./fonts/Adobe Garamond Pro Bold.woff2", weight: "700" },
+    { path: "./fonts/Adobe Garamond Pro Bold Italic.woff2", weight: "700", style: "italic" },
+    { path: "./fonts/Adobe Garamond Pro Semibold.woff2", weight: "600" },
+    { path: "./fonts/Adobe Garamond Pro Semibold Italic.woff2", weight: "600", style: "italic" },
+  ],
+  variable: "--font-adobe-garamond",
 });
 
 export const metadata: Metadata = {
@@ -26,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${adobeGaramondPro.variable} font-sans antialiased bg-black`}
       >
         {children}
       </body>
